@@ -12,3 +12,5 @@ The codes in this repository are used for uplink iperf3 throughput measurement i
 *rx_report.sh*
 
 ## Dependency
+ubuntu 20.04, kernel 5.11.0-27-generic
+iperf3.9 
