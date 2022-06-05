@@ -1,2 +1,2 @@
-# Uplink Multi-client Test
+# Uplink Multi-STA Test
 ## Description
