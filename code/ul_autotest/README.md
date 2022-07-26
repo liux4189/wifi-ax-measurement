@@ -6,10 +6,10 @@ The codes in this repository are used for uplink iperf3 throughput measurement i
 ## Files
 1.*scheduler.c*
 2.*config.csv*
-*setup.sh*
-*iperf3.c*
-*fixed_rate.h*
-*rx_report.sh*
+3.*setup.sh*
+4.*iperf3.c*
+5.*fixed_rate.h*
+6.*rx_report.sh*
 
 ## Dependency
 ubuntu 20.04, kernel 5.11.0-27-generic
