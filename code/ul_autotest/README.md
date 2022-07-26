@@ -19,6 +19,6 @@ iperf3.9
 ![testbed](figures/flowchart.png)
 
 ## Usage
-1. Step A. Run setup.sh on the server. The AP and all devices under test will be configured properly (including ssh key setup and script deployment).
-Modify the variable IParray before runing. 
+1. Step A. Run setup.sh on the server. The AP and all devices under test will be configured properly (including ssh key setup and script deployment to AP).
+We might need to modify the variable IParray before runing. 
 2.  
