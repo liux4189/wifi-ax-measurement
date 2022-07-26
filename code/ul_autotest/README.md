@@ -19,4 +19,4 @@ iperf3.9
 ![testbed](figures/flowchart.png)
 
 ## Usage
-
+..1. Step A. Run setup.sh on the server. The AP and all devices under test will be configured properly. 
