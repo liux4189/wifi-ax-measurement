@@ -7,7 +7,7 @@ The codes in this repository are used for uplink iperf3 throughput measurement i
 1. *scheduler.c*: the scheduler of the experiment runs on the server PC.
 2. *config.csv*:  configuration of the tests. 
 3. *setup.sh*:
-4. *iperf3.c*
+4. *iperf3_daemon.c*
 5. *fixed_rate.h*
 6. *rx_report.sh*
 
@@ -23,7 +23,7 @@ iperf3.9
 2. Edit the config.csv. Each row of config.csv specify the seting of one test.
 ![config_csv](figures/config_csv.png)
 *  addrPrefix. The subnet prefix of the Wi-Fi network.
-*  cPort. The tcp port that the client program (iperf3.c) listen to. 
+*  cPort. The tcp port that the client program (iperf3_daemon.c) listen to for receiving control command from the scheduler. 
 *  server. The suffix of the IP address of the server. 
 *  clients. The list of suffix of the IP address of the clients, separated by "/"
 *  sPorts.  The list of ports that iperf3 servers use. 
