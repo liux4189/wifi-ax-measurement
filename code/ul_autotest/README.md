@@ -20,11 +20,15 @@ iperf3.9
 
 ## Usage
 1. Deploy the test scripts on the server and clients.
-*  *Server*  ~/workspace/ul_autotest/ directory has scheduler.c (compiled), setup.sh, rx_report.sh, and config.csv  
-*  *Client* ~/workspace/ul_autotest/ directory has iperf3_daemon (compiled), fixed_rate.sh
+*  *Server*  ~/workspace/ul_autotest/ directory has scheduler.c, setup.sh, rx_report.sh, and config.csv  
+*  *Client* ~/workspace/ul_autotest/ directory has iperf3_daemon, fixed_rate.sh
 
-2. Run setup.sh on the server. The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
-3. Edit the config.csv. Each row of config.csv specify the seting of one test.
+2. Compile C programs
+   At the server,
+   ```gcc -o scheduler scheduler.c -lm```
+   
+4. Run setup.sh on the server. The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
+5. Edit the config.csv. Each row of config.csv specify the seting of one test.
 ![config_csv](figures/config_csv.png)
 *  addrPrefix. The subnet prefix of the Wi-Fi network.
 *  cPort. The tcp port that the client program (iperf3_daemon.c) listen to for receiving control command from the scheduler. 
