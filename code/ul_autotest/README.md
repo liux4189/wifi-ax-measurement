@@ -48,4 +48,5 @@ iperf3.9
 5. Start the iperf3_daemon at the clients. They will start to wait for commands. 
    Alternatively, we can set iperf3_daemon to autostart on boot following [this](https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en).
 6. Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv.
-7. Start scheduler at the server. ```./sceduler config.csv```
+7. Start scheduler at the server. ```./sceduler config.csv```.
+   After the test done, find the log files in the /tmp/home/root/measurement/M(S)U for OFDMA (CSMA/CA).
