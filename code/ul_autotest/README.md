@@ -45,4 +45,4 @@ iperf3.9
 *  ofdma.  0: CSMA/CA 1:OFDMA. This is only used to generate the name of Log files.
 *  duration(s). The duration of the test
 
-5. Start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv 
+5. Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv 
