@@ -45,5 +45,6 @@ iperf3.9
 *  ofdma.  0: CSMA/CA 1:OFDMA. This is only used to generate the name of Log files.
 *  duration(s). The duration of the test
 
-5. Start the iperf3_daemon at the clients. They will start to wait for commands.
-6.  Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv 
+5. Start the iperf3_daemon at the clients. They will start to wait for commands. 
+   Alternatively, we can set iperf3_daemon to autostart on boot following [this](https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en)
+7.  Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv 
