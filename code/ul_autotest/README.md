@@ -29,9 +29,10 @@ iperf3.9
    At the client run
    ```gcc -o iperf3_daemon iperf3_daemon.c```
    
-3. Run setup.sh on the server. ```./setup.sh```` The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
+3. Log into the admin page of AP and mode (e.g., OFDMA and CSMA/CA) 
+4. Run setup.sh on the server. ```./setup.sh```` The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
 
-4. Edit the config.csv. Each row of config.csv specify the seting of one test.
+5. Edit the config.csv. Each row of config.csv specify the seting of one test.
 ![config_csv](figures/config_csv.png)
 *  addrPrefix. The subnet prefix of the Wi-Fi network.
 *  cPort. The tcp port that the client program (iperf3_daemon.c) listen to for receiving control command from the scheduler. 
@@ -45,8 +46,8 @@ iperf3.9
 *  ofdma.  0: CSMA/CA 1:OFDMA. This is only used to generate the name of Log files.
 *  duration(s). The duration of the test
 
-5. Start the iperf3_daemon at the clients. They will start to wait for commands. 
+6. Start the iperf3_daemon at the clients. They will start to wait for commands. 
    Alternatively, we can set iperf3_daemon to autostart on boot following [this](https://help.ubuntu.com/stable/ubuntu-help/startup-applications.html.en).
-6. Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv.
-7. Start scheduler at the server. ```./sceduler config.csv```.
+7. Open new terminals and start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv.
+8. Start scheduler at the server. ```./sceduler config.csv```.
    After the test done, find the log files in the /tmp/home/root/measurement/M(S)U for OFDMA (CSMA/CA).
