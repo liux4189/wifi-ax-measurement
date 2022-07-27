@@ -29,7 +29,7 @@ iperf3.9
    At the client run
    ```gcc -o iperf3_daemon iperf3_daemon.c```
    
-3. Run setup.sh on the server. The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
+3. Run setup.sh on the server. ```./setup.sh```` The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
 
 4. Edit the config.csv. Each row of config.csv specify the seting of one test.
 ![config_csv](figures/config_csv.png)
@@ -44,3 +44,5 @@ iperf3.9
 *  devname.  The description of the client device in the test. This is only used to generate the name of Log files.
 *  ofdma.  0: CSMA/CA 1:OFDMA. This is only used to generate the name of Log files.
 *  duration(s). The duration of the test
+
+5. Start multiple iperf3 servers at the server. ```iperf3 -s -p PORT```  PORT needs to match the sPorts in the config.csv 
