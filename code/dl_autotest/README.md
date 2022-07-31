@@ -18,15 +18,14 @@ iperf3.9
 ![testbed](figures/flowchart.png)
 
 ## Usage
-1. Deploy the test scripts on the server and clients.
-*  *Server*  ~/workspace/ul_autotest/ directory has scheduler.c, setup.sh, rx_report.sh, and config.csv  
-*  *Client* ~/workspace/ul_autotest/ directory has iperf3_daemon.c, fixed_rate.sh
+1. Deploy the test scripts on the desktop server.
+*  *Server*  ~/workspace/ul_autotest/ directory has scheduler_dl.c, setup.sh, bs_data.sh, and config.csv  
 
 2. Compile C programs.
    At the server, run
-   ```gcc -o scheduler scheduler.c -lm```
-   At the client run
-   ```gcc -o iperf3_daemon iperf3_daemon.c```
+   ```gcc -o scheduler_dl scheduler_dl.c -lm```
+   At each client, start a iperf3 server
+   ```iperf3 -s```
    
 3. Log into the admin page of AP and mode (e.g., OFDMA and CSMA/CA) 
 4. Run setup.sh on the server. ```./setup.sh```` The AP and all devices under test will be configured properly (including setup ssh key for passwordless acess and copy rx_report.sh script to AP). Note that depend on the devices to test, we might need to modify the variable IParray before running setup.sh. 
