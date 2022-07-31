@@ -46,6 +46,6 @@ iperf3.9
 6. Start scheduler at the server. ```./sceduler_dl config.csv```.
    After the test done, find the log files in the /tmp/home/root/measurement/DL/M(S)U for OFDMA (CSMA/CA).
 
-7. Start the auto tcpdump. ```./autocap TID```
+7. Optionally, start the auto tcpdump. ```./autocap TID```
    The TID is used for sepcify the TID of the client to be monitored in the OFDMA mode. 
    The value can be obtained by generated some uplink traffic and run ``` wl -i eth6  umsched``` at the AP. 
