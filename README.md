@@ -1,7 +1,10 @@
 # A First Look at Wi-Fi 6 in Action: Throughput, Latency, Energy Efficiency, and Security
 
 
-## Setup
+## Introduction 
+The repository provides the data and codes for Wi-Fi 6 paper published in SIGMETRICS'23 paper ([Paper](https://dl.acm.org/doi/10.1145/3579451)).
+The project is a comprehensive measurement study of various KPIs acheived by the first-generation Wi-Fi 6 (i.e., 802.11ax) network, including the OFDMA throughput, 
+latency, and power consumption. The experiments is conducted with commodity Wi-Fi devices (e.g., RT-AX58U, Galaxy S10, and Intel AX210 depicted in the figure. We provide the raw data and examplary analysis MATLAB code.
 ![setup](misc/testbed_setup.png)
 
 ## Data
