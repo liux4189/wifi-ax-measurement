@@ -63,3 +63,23 @@ For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA
 │   ├── ulofdma_powerprofile_S10.m (Uplink power profile of Galaxy S10)
 ├── utils (functions to parse router log files)
 ```
+## BibTeX
+```bash
+@article{10.1145/3579451,
+author = {Liu, Ruofeng and Choi, Nakjung},
+title = {A First Look at Wi-Fi 6 in Action: Throughput, Latency, Energy Efficiency, and Security},
+year = {2023},
+issue_date = {March 2023},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {7},
+number = {1},
+url = {https://doi.org/10.1145/3579451},
+doi = {10.1145/3579451},
+journal = {Proc. ACM Meas. Anal. Comput. Syst.},
+month = {mar},
+articleno = {25},
+numpages = {25},
+keywords = {TWT, IEEE 802.11ax, Wi-Fi 6, OFDMA}
+}
+```
