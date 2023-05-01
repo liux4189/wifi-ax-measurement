@@ -2,9 +2,15 @@
 
 
 ## Setup
-## Data 
-### The naming rules:
-The naming rule of the log is as follows:`{#USERS}{mu/su}_{#PC_NICS}pc_FA{#FRAME_AGGREGATED}_{BANDWITH}mhz_{ul/dl}_mcs{MCS}_{PACKET_LENGTH}bytes.log`. For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA test with 4 clients (all are PC users using AX210) and the 3 MPDUs aggregated to form a 4500-bytes AMPU. 
+## Data
+We collected three types of raw measurement data:
+- .log: Throughput measurement log from ASUS router.
+- .pcap: The wireshark capture using a Wi-Fi 6 sniffer.
+- .csv:  The energy consumption trace of mobile devices captured by a power monitor.
+
+### Name rules
+The uplink and downlink files have slightly different naming rules. The downlink frame aggregation (AMPDU size) can be directly configured so the AMPDU configuration is specified in the file name. The name of downlink log follows:`{#USERS}{mu/su}_{#PC_NICS}pc_FA{#FRAME_AGGREGATED}_{BANDWITH}mhz_dl_mcs{MCS}_{PACKET_LENGTH}bytes.{log/pcap/csv}`. 
+For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA test with 4 clients (all are PC users using AX210) and the 3 MPDUs aggregated to form a 4500-bytes AMPU.  In contrast, The uplink frame aggregation is indirectly configured using UL duration of OFDMA frame so the UL duration is specified in the file instead. The name of downlink log follows: `{#USERS}{mu/su}_{#PC_NICS}pc_{BANDWITH}mhz_ul_mcs{MCS}_{UL_DURATION}us.{log/pcap/csv}`.  For example, 4mu_4pc_80MHz_ul_mcs9_800us.log is a throughput log with UL duration configured to 800us. 
 
 | Paramter     | Description           | Value |
 | ------------- |:-------------:| -----|
@@ -14,10 +20,10 @@ The naming rule of the log is as follows:`{#USERS}{mu/su}_{#PC_NICS}pc_FA{#FRAME
 |FA{#FRAME_AGGREGATED}| The number of MAC packet aggregated in AMPDU transmission |- |
 |{BANDWITH}mhz| Bandwith setting | 20/40/80| 
 |{PACKET_LENGTH}bytes| The aggregated packet length| -|
+|{UL_DURATION}| Uplink duration of the OFDMA transmission| 0 - 4096 |
 
 
 
-Throughput measurement data (the throughput log in ASUS router) is placed under /throughput directory.
 
 
 
