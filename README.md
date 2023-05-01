@@ -2,6 +2,8 @@
 
 
 ## Setup
+![setup](misc/testbed_setup.png)
+
 ## Data
 We collected three types of raw measurement data:
 - .log: Throughput measurement log from ASUS router.
