@@ -3,8 +3,8 @@
 
 ## Setup
 ## Data 
-1. Throughput measurement data (the throughput log in ASUS router) is placed under /throughput directory.  The naming rule of the log is as follows:
-`{#USERS}{mu/su}_{#PC_NICS}pc_FA{#FRAME_AGGREGATED}_{BANDWITH}mhz_{ul/dl}_mcs{MCS}_{PACKET_LENGTH}bytes.log`. For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink test with 4 clients (all are PC users using AX210) and the 3 MPDUs aggregated to form a 4500-bytes AMPU. 
+### The naming rules:
+The naming rule of the log is as follows:`{#USERS}{mu/su}_{#PC_NICS}pc_FA{#FRAME_AGGREGATED}_{BANDWITH}mhz_{ul/dl}_mcs{MCS}_{PACKET_LENGTH}bytes.log`. For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA test with 4 clients (all are PC users using AX210) and the 3 MPDUs aggregated to form a 4500-bytes AMPU. 
 
 | Paramter     | Description           | Value |
 | ------------- |:-------------:| -----|
@@ -17,13 +17,9 @@
 
 
 
+Throughput measurement data (the throughput log in ASUS router) is placed under /throughput directory.
 
-| Subfolder     | Description           | File naming rules  |
-| ------------- |:-------------:| -----|
-| baseline_FAoff_bandwidth    | Downlink single user; Frame aggregation is turned off. | baseline_FAoff_{BANDWIDTH}MHz
- |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+
 
 
 ## MATLAB Script
