@@ -54,4 +54,12 @@ For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA
 ```
 
 ## MATLAB Script
-
+```bash
+├── throughput
+│   ├── dl_throughput_baseline_singleuser.m (single user downlink throughput analysis)
+│   ├── dl_throughput_ofdma.m (downlink ofdma throughput benchmark)
+├── power 
+│   ├── dlofdma_powerprofile_S10.m (Downlink power profile of Galaxy S10)
+│   ├── ulofdma_powerprofile_S10.m (Uplink power profile of Galaxy S10)
+├── utils (functions to parse router log files)
+```
