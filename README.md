@@ -36,9 +36,13 @@ For example, 4su_4pc_FA3_dl_mcs3_4500bytes.log is captured in a downlink CSMA/CA
 ├── pcap (The wireshark sniffer captures)
 │   ├── dlofdma\FAx (Downlink multiple user pcap  with AMPDU size = x)
 │   ├── ulofdma (Uplinklink multiple user pcap)
-├── power (The power montor real-time log)
-│   ├── dlofdma (Downlink multiple user throughput)
-|   |   ├── UDP\ofdma\FAx  (Downlink OFDMA throughput UDP test with AMPDU size = x)  
+├── power (The power monitor real-time log)
+│   ├── dlofdma (Downlink multiple user energy efficiency benchmark)
+|   |   ├── csv  (The raw power monitor log) 
+|   |   ├── log  (The throughput log in the corresponding experiment)  
+│   ├── ulofdma (Uplink multiple user energy efficiency benchmark)
+|   |   ├── csv  (The raw power monitor log) 
+|   |   ├── log  (The throughput log in the corresponding experiment)
 ```
 
 ## MATLAB Script
