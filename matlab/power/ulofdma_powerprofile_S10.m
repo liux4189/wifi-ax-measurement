@@ -41,13 +41,10 @@ for numClientIdx = 1:length(numClients)
 end 
 
 sleep_current = 108;
-power_ofdma_1mu = squeeze(power_ofdma_matrix(1,:,:))  - sleep_current + 100;
+power_ofdma_1mu = squeeze(power_ofdma_matrix(1,:,:));
 power_ofdma_2mu = squeeze(power_ofdma_matrix(2,:,:))  - sleep_current;
 power_ofdma_4mu = squeeze(power_ofdma_matrix(3,:,:))  - sleep_current;
 power_ofdma_8mu = squeeze(power_ofdma_matrix(4,:,:))  - sleep_current;
-power_ofdma_8mu(1,:) = power_ofdma_8mu(2,:);
-power_ofdma_8mu(11,:) = power_ofdma_8mu(10,:);
-
 
 avg_power_vs_mcs = [mean(power_ofdma_1mu, 2) mean(power_ofdma_2mu, 2) mean(power_ofdma_4mu, 2) mean(power_ofdma_8mu, 2)];
 max_power_vs_mcs = [max(power_ofdma_1mu,[], 2) max(power_ofdma_2mu, [], 2) max(power_ofdma_4mu,[], 2) max(power_ofdma_8mu, [],2)];
